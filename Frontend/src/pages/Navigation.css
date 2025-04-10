@@ -1,0 +1,369 @@
+/* Add this at the top to adjust for 100% zoom */
+html {
+  font-size: 67%; /* Matches your 67% zoom experience at 100% zoom */
+}
+
+.navigation-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+}
+
+.navigation-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #2c3e50;
+  color: white;
+}
+
+.navigation-header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.back-button {
+  padding: 8px 15px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.back-button:hover {
+  background-color: #c0392b;
+}
+
+.navigation-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  position: relative;
+}
+
+/* Updated TomTom popup styles with higher specificity and !important */
+div.tt-popup__content {
+  background-color: black !important;
+  color: white !important;
+  padding: 5px 10px !important;
+  border-radius: 3px !important;
+  font-size: 1rem !important;
+}
+
+div.tt-popup__pointer {
+  border-top-color: black !important;
+}
+
+.map-container {
+  width: 100%;
+  height: calc(100vh - 150px);
+  position: relative;
+}
+
+.info-panel {
+  padding: 0;
+  background-color: white;
+  border-top: 2px solid #e74c3c;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.location-textboxes {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #f5f5f5;
+  border-bottom: none;
+}
+
+.location-input-group {
+  width: 48%;
+  position: relative;
+}
+
+.location-input-group label {
+  display: block;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 5px;
+  font-size: 1.3rem;
+}
+
+.location-input-group input {
+  width: 100%;
+  padding: 4px 6px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1.3rem;
+  background-color: white;
+  color: #333;
+}
+
+.start-button-container {
+  padding: 15px 15px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: center;
+  background-color: #f5f5f5;
+}
+
+.start-button {
+  padding: 10px 30px;
+  background-color: #0e4d8b;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  width: 30%;
+  margin: 0 auto;
+}
+
+.start-button:hover {
+  background-color: #0a3a6b;
+}
+
+.stop-button {
+  padding: 10px 30px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  width: 30%;
+  margin: 0 auto;
+}
+
+.stop-button:hover {
+  background-color: #c0392b;
+}
+
+.location-error {
+  margin: 15px 0;
+  padding: 10px;
+  color: #000000;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.1rem;
+  background-color: #f5f5f5;
+}
+
+.location-dropdown {
+  position: absolute;
+  width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 0 0 4px 4px;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-item {
+  padding: 8px 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.dropdown-item:hover {
+  background-color: #f5f5f5;
+}
+
+.dropdown-item:last-child {
+  border-bottom: none;
+}
+
+.route-info-details {
+  padding: 25px 25px;
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #ddd;
+  min-height: 100px;
+}
+
+.route-info-details.scrollable {
+  max-height: 300px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.trip-summary {
+  color: #2c3e50;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.trip-summary br {
+  display: block;
+  margin: 5px 0;
+}
+
+.additional-buttons {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  margin-top: 0;
+  margin-bottom: 0;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f5f5;
+  flex-grow: 1;
+}
+
+.route-info-item {
+  margin-bottom: 25px;
+}
+
+.route-info-label {
+  display: block;
+  font-weight: bold;
+  color: #2c3e50;
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+}
+
+.route-info-value {
+  display: block;
+  color: #c0392b;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-left: 3px;   /* Add this to move right */
+  margin-top: 1.4px;     /* Add this to move down */
+}
+
+.additional-button {
+  padding: 12px 15px;
+  background-color: #0e4d8b;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  transition: background-color 0.3s;
+  width: 80%;
+  max-width: 300px;
+}
+
+.additional-button:hover {
+  background-color: #0a3a6b;
+}
+
+.additional-button:last-child {
+  margin-bottom: 0;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 70px);
+  font-size: 1.5rem;
+  color: #2c3e50;
+}
+
+.error-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 70px);
+  font-size: 1.2rem;
+  color: #e74c3c;
+  text-align: center;
+  padding: 0 20px;
+}
+
+@media (min-width: 768px) {
+  .navigation-content {
+    flex-direction: row;
+  }
+
+  .map-container {
+    height: calc(100vh - 70px);
+    width: 70%;
+  }
+
+  .info-panel {
+    width: 30%;
+    height: calc(100vh - 70px);
+    overflow-y: auto;
+    border-top: none;
+    border-left: 2px solid #e74c3c;
+    background-color: #f5f5f5;
+  }
+}
+
+.route-options {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  max-width: 300px;
+  margin-bottom: 20px;
+}
+
+.route-option {
+  padding: 8px 15px;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  transition: background-color 0.3s;
+}
+
+.route-option:hover {
+  background-color: #357abd;
+}
+
+.route-option.selected {
+  background-color: #2c3e50;
+}
+
+.route-info-value br {
+  display: block;
+  margin: 5px 0;
+}
+
+.ev-stations-message {
+  width: 80%;
+  max-width: 300px;
+  padding: 10px;
+  margin-top: 10px;
+  color: #e74c3c;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.route-info-details.scrollable::-webkit-scrollbar {
+  width: 8px;
+}
+
+.route-info-details.scrollable::-webkit-scrollbar-track {
+  background: #f5f5f5;
+}
+
+.route-info-details.scrollable::-webkit-scrollbar-thumb {
+  background: #888888;
+  border-radius: 4px;
+}
+
+.route-info-details.scrollable::-webkit-scrollbar-thumb:hover {
+  background: #555555;
+}
