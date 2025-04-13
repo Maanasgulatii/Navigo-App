@@ -89,9 +89,13 @@ node server.js
 ## Pages
 Navigo's interface splits into three key pages:
 
-- **Home**: The landing spot. A minimal, welcoming design.
-- **Navigation**: Input your start and end points, and watch. A black marker moves from start to finish on a map, showing distance, ETA, and petrol pumps. Last trip details stick around for review on the homepage.
-- **Review**: If you have any thoughts or feedback, kindly enter your name (optional), email (optional), and your review of Navigo.
+1. **Home**: The landing spot. A minimal, welcoming design. <br><br>
+![Home page screenshot](https://raw.githubusercontent.com/MaanasGulatii/Navigo-App/main/screenshots/Home.png)<br><br>
+2. **Navigation**: Input your start and end points, and watch. A black marker moves from start to finish on a map, showing distance, ETA, and petrol pumps. Last trip details stick around for review on the homepage.<br><br>
+![Navigation page screenshot](https://raw.githubusercontent.com/MaanasGulatii/Navigo-App/main/screenshots/Nav1.png)<br><br>
+![Navigation page screenshot](https://raw.githubusercontent.com/MaanasGulatii/Navigo-App/main/screenshots/Nav2.png)<br><br>
+3. **Review**: If you have any thoughts or feedback, kindly enter your name (optional), email (optional), and your review of Navigo.<br><br>
+![Review page screenshot](https://raw.githubusercontent.com/MaanasGulatii/Navigo-App/main/screenshots/Review.png)<br><br>
 
 ---
 
