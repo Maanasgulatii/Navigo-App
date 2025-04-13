@@ -89,7 +89,7 @@ node server.js
 ## Pages
 Navigo's interface splits into three key pages:
 
-- **Home**: The landing spot. A minimal, welcoming design. 
+- **Home**: The landing spot. A minimal, welcoming design.
 - **Navigation**: Input your start and end points, and watch. A black marker moves from start to finish on a map, showing distance, ETA, and petrol pumps. Last trip details stick around for review on the homepage.
 - **Review**: If you have any thoughts or feedback, kindly enter your name (optional), email (optional), and your review of Navigo.
 
