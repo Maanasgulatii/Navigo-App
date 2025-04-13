@@ -26,18 +26,16 @@ Navigo's built with a robust, modern stack. Here's the full rundown:
 
 - **React:** Powers the dynamic, component-driven frontend for a fluid user experience.
 - **Vite:** A next-gen build tool, speeding up development and bundling the app into `dist/` for deployment.
-- **React Router:** Handles client-side routing for smooth navigation between pages (`/`, `/navigate`, `/review`).
+- **React Router:** Handles client-side routing for smooth navigation between pages.
 - **EmailJS:** Sends reviews directly to email on the live site; no backend needed once hosted.
 - **CSS:** Crafts a responsive, visually appealing design.
 - **Node.js & Express:** Runs a local backend (`server.js`) to save reviews to `reviews.txt` when testing on your machine.
 - **JavaScript (ES6+):** Core language for logic, from simulation in `Navigation.jsx` to form handling in `Review.jsx`.
-- **HTML:** Structured via `index.html`, the entry point for the React app.
+- **HTML:** Structured via `index.html`, the entry point for the app.
 
 ---
 
 ## Installation
-
-Ready to run Navigo locally? Here's a detailed guide:
 
 ### Clone the Repository
 Grab the code from GitHub:
@@ -63,8 +61,8 @@ Launch the development server:
 ```bash
 npm run dev
 ```
-- Opens in your browser—use a big screen for the full map experience!
-- Check package.json's "scripts" for dev, build, etc.
+- Opens in your browser.
+- Use a big screen for the best experience.
 
 ### Backend Setup (Optional, Local Only)
 For saving reviews to reviews.txt locally:
@@ -83,31 +81,24 @@ Start the Node server on http://localhost:5000:
 ```bash
 node server.js
 ```
-- Auto-Generation: If reviews.txt is missing, it's created with headers (Name\tEmail\tReview).
-- Test It: Submit a review at /review—it'll hit http://localhost:5000/api/reviews and append to the file.
+- If reviews.txt is missing, it's created with three columns: Name, Email, Review
+- To test it, submit a review and it will be appended to the file automatically
 
-### Local Notes
-- Frontend: Runs standalone at http://localhost:5173. Pages like /navigate use the TomTom API (hardcoded key: Pywr1bWAgjQmnF9nQz7HrJih4GjzRJeO).
-- Backend: Only active locally—Review.jsx tries fetch('http://localhost:5000/api/reviews') first, falling back to EmailJS if it's down.
-- Hosted: On Vercel, the backend's skipped—reviews go straight to EmailJS (service_qdtvzmn, template_0meu18b, t63w7Un-ufMR8JE1G).
+---
 
 ## Pages
-Navigo's interface splits into three key pages—each with a purpose:
+Navigo's interface splits into three key pages:
 
-- **Home (/)**: The landing spot—a clean, welcoming intro to Navigo. Sets the stage for your journey with a minimalist design. (Screenshot: home.png coming soon!)
-- **Navigation (/navigate)**: The powerhouse—input your start and end points, and watch the magic. A black marker moves from start to finish on a TomTom map, showing distance, ETA, traffic, and petrol pumps. Last trip details stick around for review. (Screenshot: navigation.png coming soon!)
-- **Review (/review)**: Your voice matters! Enter your name (optional), email (optional), and feedback. Locally, it saves to reviews.txt via the backend; on Vercel, it emails me via EmailJS—quick and simple. (Screenshot: review.png coming soon!)
+- **Home**: The landing spot. A minimal, welcoming design. 
+- **Navigation**: Input your start and end points, and watch. A black marker moves from start to finish on a map, showing distance, ETA, and petrol pumps. Last trip details stick around for review on the homepage.
+- **Review**: If you have any thoughts or feedback, kindly enter your name (optional), email (optional), and your review of Navigo.
+
+---
 
 ## Contact Us
-Have thoughts, suggestions, or want to chat about Navigo? Click the "Contact Us" link (coming soon to the site)—it'll fire up your email client to maanasgulati@gmail.com. I'm all ears for reviews, improvement ideas, or just a hello—let's make Navigo even better together!
+Have thoughts, suggestions, or want to chat about Navigo? Click the "Contact Us" button and drop a mail. I'd like to hear about reviews, improvement ideas, and more.
 
-## Contribute
-Love what Navigo offers? Take it for a spin at [Navigo on Vercel](https://navigo-app.vercel.app/) and share your feedback on the /review page—it's fast, easy, and helps shape the app's future. Every review fuels the journey!
+---
 
 ## Live Demo
-See Navigo in action: [Navigo on Vercel](https://navigo-app.vercel.app/). Open it on your PC's big screen for the full navigation glory—explore Home, Navigation, and Review today!
-
-## Development Tips
-- **API Keys**: Hardcoded for now (TomTom in Navigation.jsx, EmailJS in main.jsx/Review.jsx). For security, move to a .env file locally (e.g., VITE_API_KEY=your-key) and Vercel env vars later.
-- **Backend Folder**: In the repo, backend/ sits outside Frontend/. Locally, you can move it inside Frontend/ if node server.js fails—update the README if you tweak this!
-- **Vercel Hosting**: Deployed from Frontend/ with vercel.json (assumed auto-added)—no backend runs live.
+See Navigo in action: [Navigo](https://navigo-app.vercel.app/).
